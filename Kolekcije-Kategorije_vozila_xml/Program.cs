@@ -19,10 +19,6 @@ namespace Kolekcije_Kategorije_vozila_xml
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            var voziloXml = new  XDocument();
-            var rootElement = new XElement("Vozilo");
-            voziloXml.Add(rootElement);
-
         }
     }
 }
