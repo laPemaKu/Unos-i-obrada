@@ -82,7 +82,15 @@ namespace Kolekcije_Kategorije_vozila_xml
 
         private void btnUcitavanjeXml_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                using(StreamReader reader = new StreamReader(openFileDialog.FileName))
+                {
+                    txtIspis.Clear();
+                    txtIspis.AppendText(reader.ReadToEnd());
+                }
+            }
         }
     }
 }
